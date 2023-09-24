@@ -10,12 +10,7 @@ import sys
 import webbrowser
 import csv
 import time
-
-HOST = "localhost"
-PORT = 9999
-ADDRESS_TUPLE = (HOST, PORT)
-SMOKER_FILE_NAME = "smoker-temps.csv"
-SHOW_OFFER = True  # Control whether to show the RabbitMQ Admin webpage offer
+import logging
 
 # Configure logging
 from util_logger import setup_logger
@@ -117,7 +112,7 @@ if __name__ == "__main__":
     # send the message to the queue
 
     # Read temperature data from CSV file and send to RabbitMQ
-        csv_file_name = 'smoker-temps.csv'
+        csv_file_name = "smoker-temps.csv"
         sleep_interval = 30  # Sleep for 30 seconds (half a minute)
 
     send_message("localhost","01-smoker","02-food-A","02-food-B","smoker-temps.csv")  
