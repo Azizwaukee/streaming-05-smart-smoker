@@ -1,7 +1,7 @@
 """
     This program sends a message to a queue on the RabbitMQ server for a CSV file with time interval 30 sec.
 
-    Author: 
+    Author: Amaara 
     Date: September 22, 2023
 """
 
@@ -11,6 +11,7 @@ import webbrowser
 import csv
 import time
 import logging
+import os
 
 # Configure logging
 from util_logger import setup_logger
